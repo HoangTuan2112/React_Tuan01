@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*Coding Challenge #2
+        Use the BMI example from Challenge #1, and the code you already wrote, and
+        improve it.
+        Your tasks:
+        1. Print a nice output to the console, saying who has the higher BMI. The message
+        is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+        2. Use a template literal to include the BMI values in the outputs. Example: "Mark's
+        BMI (28.3) is higher than John's (23.9)!"
+        */
+        var mark = {
+
+            mass: 95,
+
+            height: 1.88,
+
+            calcBMi: function () {
+
+                return this.bmi = this.mass / (this.height * this.height);
+
+            }
+
+        }
+
+        var john = {
+
+            mass: 85,
+
+            height: 1.76,
+
+            calcBMi: function () {
+
+                return this.bmi = this.mass / (this.height * this.height);
+
+            }
+
+        }
+
+        mark.calcBMi();
+
+        console.log(mark.bmi);
+
+        john.calcBMi();
+
+        console.log(john.bmi);
+
+        var markHigherBMI = mark.bmi > john.bmi;
+
+        console.log(markHigherBMI);
+
+        if (mark.bmi > john.bmi) {
+
+            console.log(`Mark's BMI (${mark.bmi}) is higher than John's (${john.bmi})!`);
+
+        } else if (mark.bmi < john.bmi) {
+
+            console.log(`John's BMI (${john.bmi}) is higher than Mark's (${mark.bmi})!`);
+
+        } else {
+
+            console.log(`Mark's BMI (${mark.bmi}) is equal to John's (${john.bmi})!`);
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
